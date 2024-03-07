@@ -1,5 +1,15 @@
 # React Context
 
+**Table of Contents**:
+- [Terms](#terms)
+- [Problem: Props Drilling](#problem-props-drilling)
+  - [Passing State From App to LikesButton](#passing-state-from-app-to-likesbutton)
+- [Solution: useContext](#solution-usecontext)
+  - [1. Create a context object](#1-create-a-context-object)
+  - [2. Render a Context Provider](#2-render-a-context-provider)
+  - [3. Use the Context](#3-use-the-context)
+- [Summary](#summary)
+
 ## Terms
 
 - **Props Drilling** - When we pass a piece of state through 2 or more child components before reaching the component that uses the state.
