@@ -12,12 +12,11 @@
 
 ## Terms
 
+- **Context (English Definition)** — The circumstances that form the setting for an event, statement, or idea, and in terms of which it can be fully understood and assessed.
 - **Props Drilling** - When we pass a piece of state through 2 or more child components before reaching the component that uses the state.
-- **React Context** — An object where we can store global data and that any component within that context's scope can access that data. 
-- To use React's Context API, there are **3 steps**.
-  - **Making a Context object** - `const Context = createContext(startValue)`
-  - **Rendering a Context Provider** - `<Context.Provider values={values} />`
-  - **Getting values from a Context** - `useContext(Context)`
+- **React Context** — the combination of:
+  1. an object where we can store global data and
+  2. a "wrapper" component that provides its data to all descendants
 - **`createContext`** — A function exported from `react` that creates a new `Context` object.
 - **`Context.Provider`** — A component created from a `Context` object that provides all of its descendants with access to the `Context` object's values.
 - **`useContext`** — A React hook for retrieving the values of a `Context` object.
@@ -82,7 +81,15 @@ It is okay to pass a piece of state through 1 intermediate component but passing
 
 ## Solution: useContext
 
-The solution is to create something called a **Context**. Think of Context as an object where we can store global data and that any component within that context's scope can access that data.
+The solution is to create something called a **Context**.
+
+In plain english, "context" means:
+
+> the circumstances that form the setting for an event, statement, or idea, and in terms of which it can be fully understood and assessed.
+
+In React, Context is the combination of:
+1. an object where we can store global data and
+2. a "wrapper" component that provides its data to all descendants
 
 <img src='./notes-img/instagram-context-diagram.svg' style="max-width: 800px">
 
